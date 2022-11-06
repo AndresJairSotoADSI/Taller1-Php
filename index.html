@@ -1,12 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller 1 php</title>
+    <link rel="shortcut icon" href="php2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.2/lux/bootstrap.min.css"
+        integrity="sha512-c92Fgo6BOkdn6SLfXJQb1gBV26zNssZQwtkLPFoMX0B5JXd+yeOo0nx5v3rEYsjvMy97CpIRdsV4HA+AysY2Eg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Taller1-Php</title>
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="php2.png" alt="" srcset=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Ejercicio1</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2">Ejercicio2</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal3">Ejercicio3</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop4">Ejercicio4</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#Ejemplo5">Ejercicio5</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal6">Ejercicio6</button>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <img src="motivacion.jpg" class="img-fluid" alt="...">
+    <!-- Modal 1 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel" style="text-align:center;">Ejercicio1</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body code">
+                    <h6>1.Este programa muestra el signo zodiacal de una persona.
+                        Para ello el usuario debe introducir únicamente el día y
+                        el mes de nacimiento y el programa determinará inmediatamente
+                        el signo zodiacal de la persona.</h6>
+                    <form id="form1" action="api1.php" method="post">
+                        <label>Ingrese el dia de nacimiento</label>
+                        <input type="text" name="dia" class="form-control">
+                        <label>Ingrese el mes de nacimiento</label>
+                        <input type="text" class="form-control" name="mes">
+                        <button type="submit" class="btn btn-primary btn-sm" >Calcular</button>
+                    </form>
+                    <pre id="res1"></pre>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm" id="Limpi1">Limpiar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal2 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ejercicio2</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body mo2">
+                    <h6>2. De la galería de productos, el usuario introducirá el código y el número de unidades del
+                        producto que desea comprar. El programa determinará el total a pagar, como una factura. Ejemplo
+                        de factura.</h6>
+                    <div class="row">
+                        <div class="col-6 code">
+                            <h5>Codigo Express</h5>
+                            <p>1.Batidora Artisan = $1289900</p>
+                            <p>2.Licuadora = $829900 ​ </p>
+                            <p>3.Freidora de aire = $299900</p>
+                            <p>4.Nevera GL = $7819900</p>
+                            <p>5.Horno microondas = $312200</p>
+                            <p>6.Horno tostador = $69900</p>
+                            <p>7.Bascula digital = $83900</p>
+                            <p>8.Lavadora automatica = $1673000</p>
+                            <p>9.Estufa vitroceramica = $1639900</p>
+                            <p>10.Mini panini universal = $388700</p>
+                        </div>
+                        <div class="col-6 code1">
+                            <form class="form" id="form2" method="post" action="api2.php">
+                                <label class="titulo">Pago producto</label>
+                                <div>
+                                    <label>Ingresa el codigo del producto</label>
+                                    <input type="number" id="codigo" class="form-control" name="codigo" pattern="[0-9]+"
+                                        required>
+                                </div>
+                                <div>
+                                    <label>Ingresa la cantidad de productos</label>
+                                    <input type="number" id="dia" class="form-control" name="cantidad" pattern="[0-9]+"
+                                        required>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-sm mb-4" >Calcular</button>
+                                </div>
+                                <div>
+                                    <p>El total a pagar es de: <b id="res2"></b></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm " id="Limpi2">Limpiar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal3 -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel3">Ejercicio 3</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row ">
+                        <div class="col-6 code">
+                            <form class="row g-3" id="form3" method="post" action="api3.php">
+                                <h6>Escribir un programa que permita ingresar para los N alumnos de una universidad:
+                                    SEXO (‘M’ o ‘F’), edad y
+                                    carrera (‘A’,’B’,’C’). Imprimir la carrera con menor promedio de edad de sus alumnos
+                                    que son varones</h6>
+                                <label class="titulo">Promedio universidad</label>
+                                <div class="col-md-6">
+                                    <label>Ingresa la cantidad de estudiantes</label>
+                                    <input type="number" id="cantidad" class="form-control cantidad" name="cantidad"
+                                        pattern="[0-9]+" required disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Ingrese el genero del estudiante</label>
+                                    <select class="form-select" name="genero" id="genero" required disabled>
+                                        <option value=""></option>
+                                        <option value="femenino">Femenino</option>
+                                        <option value="masculino">Masculino</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Ingresa la edad del estudiante</label>
+                                    <input type="number" id="edad" class="form-control edad" name="edad" pattern="[0-9]+"
+                                        required disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Ingrese la carrera del estudiante</label>
+                                    <select class="form-select" name="carrera" id="carrera" required disabled>
+                                        <option value="" disabled selected></option>
+                                        <option value="a">A</option>
+                                        <option value="b">B</option>
+                                        <option value="c">C</option>
+                                    </select>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-primary btn-sm submit"
+                                            disabled>Calcular</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button type="button" class="btn btn-primary btn-sm Limpiar" id="Limpiar3"
+                                            >Limpiar</button>
+                                    </div>
+                                </div>
+                                <div>La carrera con estudiantes de menor edad y varones es:
+                                    <p id="res3"></p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <table class="table table-dark table-hover" id="tabla_Carreras" border="">
+                                <thead>
+                                    <tr class="TITLE">
+                                        <th colspan="4">Tabla</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Cod</th>
+                                        <th>Genero</th>
+                                        <th>Edad</th>
+                                        <th>Carrera</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dataTable_carreras"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal4 -->
+        <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Ejercicio4</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body code">
+                        <form class="form" id="form4" method="post" action="api4.php">
+                            <h6>Una persona adquirió un producto para pagar en 20 meses. El primer mes pagó $10, el segundo $20, el
+                                tercero $40 y así sucesivamente. Realice un algoritmo para determinar cuánto debe pagar mensualmente y el
+                                total de lo que pagó después de los 20 meses. (Investigación código DATE o DATATIME javaScricpt)</h6>
+                            <label class="titulo">Pago en 20 meses</label>
+                            <div>
+                                <label>Ingresa la cantidad de meses</label>
+                                <input type="date" id="meses4"  class="form-control pago" name="meses" pattern="[0-9]+" required>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-sm">Calcular</button>
+                            </div>
+                            <div>La suma a pagar es: <p id="res4"></p></div>
+                        </form>
+                        <table class="table table-dark table-hover" border="">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Tabla</th>                  
+                                </tr>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Fecha</th>
+                                    <th>Total pagar</th>                 
+                                </tr>
+                            </thead>
+                            <tbody id="dataTablepagos"></tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm" id="Limpi4">Limpiar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal5 -->
+        <div class="modal fade" id="Ejemplo5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel5">Ejercicio5</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close">Salir</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6 code">
+                                <form  id="form5" method="post" action="api5.php">
+                                    <h6>Un empleado de la tienda “Tiki Taka” realiza N ventas durante el día, se requiere saber cuántas de ellas
+                                        fueron mayores a $1000, cuántas fueron mayores a $500 pero menores o iguales a $1000, y cuántas fueron
+                                        menores o iguales a $500. Además, se requiere saber el monto de lo vendido en cada categoría y de forma
+                                        global.</h6>
+                                    <label class="titulo">Ventas de Tiki Taka</label>
+                                    <div>
+                                        <label>Ingresa la cantidad de ventas</label>
+                                        <input type="number" id="cantidad" class="form-control" name="cantidad" pattern="[0-9]+" required >
+                                    </div>
+                                    <div>
+                                        <label>Ingrese el precio del producto</label>
+                                        <input type="number" id="precio" class="form-control" name="precio" pattern="[0-9]+" required >
+                                    </div>
+                                    <div>
+                                        <button type="submit"  class="btn btn-primary btn-sm" >Calcular</button>
+                                    </div>
+                                    <div>
+                                        <p id="res5"></p>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-6">
+                                <table class="table table-dark table-hover"border="">
+                                    <thead>
+                                        <tr >
+                                            <th colspan="3">Factura Nº 0001</th>                  
+                                        </tr>
+                                        <tr>
+                                            <th>Ventas</th>
+                                            <th>Cantidad ventas</th>
+                                            <th>Valor</th>                 
+                                        </tr>
+                                    </thead>
+                                    <tbody id="Table_tikitaki"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="Limpi5">Limpiar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal6 -->
+        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Ejercicio 6</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body code">
+                        <form class="form" id="form6" method="post" action="api6.php">
+                            <h6>Calcular el promedio de masa de aire de los neumáticos de N vehículos que están en reparación en un
+                                servicio de alineación y balanceo. La presión, volumen y temperatura de una masa de aire se relacionan por
+                                la fórmula: masa= presión * volumen Los vehículos pueden ser motocicletas o automóviles.</h6>
+                
+                                <label class="titulo">Promedio de masa</label>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label>Ingresa la cantidad de vehiculos</label>
+                                    <input type="number" id="canti" class="form-control cantidad" name="cantidad" pattern="[0-9]+" required disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Ingrese la presion del vehiculo</label>
+                                    <input type="number" id="presion" class="form-control precio" name="precio" pattern="[0-9]+" required disabled>
+                                </div>
+                            </div>
+                            <div>
+                                <label>Ingrese el volumen del vehiculo</label>
+                                <input type="number" id="volumen" class="form-control precio" name="precio" pattern="[0-9]+" required disabled>
+                            </div>
+                            <div>
+                                <button type="submit"class="btn btn-primary btn-sm" value="Enviar">Calcular</button>
+                            </div>
+                            <div>El promedio de masa en los neumaticos es: <p id="res6"></p></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm" id="Limpi6">Limpiar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+            integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
+        </script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>
